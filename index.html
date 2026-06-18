@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Sémantique</title>
+    <link rel="stylesheet" href="semanstyle.css">
+</head>
+<body>
+    <!-- Entete de la page -->
+    <header>
+        <h1>Ma pizzéria en ligne</h1>
+        <!-- Balise <nav>: Identifie explicitement le menu de navigation principale pour les moteurs de recherche et les outils d'accessibilité-->
+        <nav>
+            <ul>
+                <li> <a href="#nouveautes">Nouveautés</a></li>
+                <li> <a href="#specialites">Spécialités</a></li>
+                <li> <a href="#commande"> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Corps Principale de la page-->
+
+    <main>
+
+        <!-- Section thématique: Regroupe de manière logique les nouveautés de l'établissement, introuduite par son titre h2-->
+        <section id="nouveautes">
+            <h2>Nos sorties du moment</h2>
+            <!-- Balise <article>: Représente une entité de contenu indépendante-->
+            <article>
+                <h3>Pizza aux quatre fromages version américaine </h3>
+                <p>L' extreme gourmandise à l'américaine: une pate XXL et un fondant irrésistible. </p>
+
+                <!-- Balise <details>: Permet une interactivité native et accessible  pour masquer/afficher les détails sans JS-->
+                <details>
+                    <summary>Découvrez le mystère derrière notre blend de fromage</summary>
+                    <p>
+                        Sur une base de sauce tomate mijotée aux herbes, nous superposons une montagne 
+                        de <strong>Mozzarella Premium</strong> pour le filant légendaire, </p>
+                        <p> du <strong>Cheddar affiné</strong> pour la touche pop et colorée,</p>
+                        <p> du <strong>Gorgonzola</strong> pour le caractère, </p> 
+                         <p>et un supçon de <strong>Parme rapé</strong> juste à la sortie du four. Un pur moment de réconfort.
+                    </p>
+                </details>
+            </article>
+            <article>
+                <h3>La spicy Pepperoni</h3>
+                <p>Un grand classique de New York: du pepperoni croustillant et une douche de piment doux.</p>
+                <details>
+                    <summary>Découvrez les ingrédients</summary>
+                    <p>Sauce tomate maison, double Mozzarella, tranches de pepperoni américain et piments japonais.</p>
+
+                </details>
+
+            </article>
+
+
+        </section>
+
+        
+        <!-- Section thématique: Regroupe de manière logique les spécialités de l'établissement, introduite par son titre h2-->
+        <section id="specialites">
+            <h2>Nos spécialités</h2>
+            <article>
+                <h3>La chicken Tériyaki</h3>
+                <p>Le mariage parfait entre la street food américaine et les saveur délicates de l'Asie.</p>
+                <details>
+                    <summary>Découvrez les ingrédients de cette spécialités</summary>
+                    <p>
+                        Sur une base de mozzarella fondante, nous déposons de généreux morceaux de filet de poulet emincé, <br>
+                        des oignons rouges croquants et des éclats de sésame avec un nappage de <strong>sauce Teriyaki</strong>.
+                    </p>
+                </details>
+            </article>
+            <article>
+                <h3>La classique Jambon-fromage</h3>
+                <p>Notre version revisitée du traditionnel indémodable, avec des produits sélectionnés pour leur gout unique.</p>
+                <details>
+                    <summary>En savoir plus sur notre recette artisanale</summary>
+                    <p>
+                        Une base nappée d'une sauce tomate aux herbes de provence avec du généreux <strong>Jambon blanc supérieur</strong>.
+                    </p>
+                </details>
+            </article>
+
+        </section>
+
+        <!-- Section latérale: Présente des informations complémentaires ou des conseils -->
+        <aside>
+            <h2>Conseil du chef</h2>
+            <p>Vous pouvez rajouter vos sauces maisons pour réhausser le gout.</p>
+        </aside>
+
+        <!-- Section Formulaire: Structurée pour la capture accessible des données de commande -->
+        <section id="commande">
+            <h2>Passez votre commande</h2>
+            <form action="#">
+                <!-- Balise <fieldset>: Regroupe les éléments de formulaire liés pour une meilleure organisation et accessibilité -->
+                <fieldset>
+                    <!-- Balise <legend>: Fournit une légende descriptive pour le groupe de champs du formulaire -->
+                    <legend>Informations sur la commande</legend>
+                    <div>
+                        <label for="name">Entrez votre nom:</label>
+                        <input type="text" name="name" id="name" placeholder="MOUSSANA">
+                    </div>
+                    <div>
+                       <label for="address">Entrez votre adresse de livraison :</label>
+                       <input type="text" name="address" id="address" placeholder="13 rue Malela François">
+                    </div>
+                    <div>
+                       <label for="pizza">Pizza:</label>
+                       <select name="pizza" id="pizza">
+                          <option value="">-- Choisissez votre pizza --</option>
+                          <option value="quatre_fromage">Quatre fromage américaine</option>
+                          <option value="pepperoni">Pepperoni</option>
+                          <option value="Teriyaki">Chicken Teriyaki</option>
+                          <option value="Jambon_fromage">Jambon Fromage</option>
+                       </select>
+                    </div>
+                    <div>
+                       <label for="quantite">Quantité de pizza:</label>
+                       <input type="number" id="quantite" name="quantite" min="1" max="10">
+                    </div>
+
+                   <!-- Bouton de validation --> 
+                    <div>
+                    <button type="submit">Commander</button>
+                    </div>
+                </fieldset>
+            </form>
+
+
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Ma pizzéria en ligne. Tous droits réservés.</p>
+    </footer>                                                                     
+</body>
+</html>
